@@ -1,6 +1,7 @@
 class LeadsController < ApplicationController
   layout "leads"
   active_scaffold :lead do |config|
+    config.theme = :blue
     # change the heading for list view
     config.label = "Customer Leads"
     # this decides what data to show in the list view

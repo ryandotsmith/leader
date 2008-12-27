@@ -60,7 +60,7 @@ position: relative;
 }
 
 .blue-theme .active-scaffold-header {
-background-color: #005CB8;
+background-color: #333799;
 }
 
 .active-scaffold-header h2 {
@@ -335,7 +335,7 @@ font-size: 11px;
 
 .active-scaffold-calculations td {
 background-color: #eee;
-border-top: 2px solid #005CB8;
+border-top: 2px solid #333799;
 font: bold 12px arial, sans-serif;
 }
 
@@ -346,7 +346,7 @@ font: bold 12px arial, sans-serif;
 }
 
 .blue-theme .active-scaffold-footer {
-background-color: #005CB8;
+background-color: #333799;
 color: #ccc;
 }
 
