@@ -36,7 +36,7 @@ color: #999;
 }
 
 .active-scaffold a:hover {
-background-color: #ff8;
+background-color: black;
 }
 
 .active-scaffold .clear-fix {
@@ -60,13 +60,13 @@ position: relative;
 }
 
 .blue-theme .active-scaffold-header {
-background-color: #333799;
+background-color: #005CB8;
 }
 
 .active-scaffold-header h2 {
 padding: 2px 0px;
 margin: 0;
-color: #555;
+color: #ffffff;
 font: bold 160% arial, sans-serif;
 }
 
@@ -335,7 +335,7 @@ font-size: 11px;
 
 .active-scaffold-calculations td {
 background-color: #eee;
-border-top: 2px solid #333799;
+border-top: 2px solid #005CB8;
 font: bold 12px arial, sans-serif;
 }
 
@@ -346,7 +346,7 @@ font: bold 12px arial, sans-serif;
 }
 
 .blue-theme .active-scaffold-footer {
-background-color: #333799;
+background-color: #005CB8;
 color: #ccc;
 }
 
