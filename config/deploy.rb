@@ -52,7 +52,6 @@ namespace :deploy do
 
   desc "Symlink shared configs and folders on each release."
     task :symlink_shared do
-      run "mkdir #{shared_path}/config"
       run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     end
       
