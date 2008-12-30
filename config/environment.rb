@@ -73,5 +73,5 @@ Rails::Initializer.run do |config|
   # Please note that observers generated using script/generate observer need to have an _observer suffix
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 end
-ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(:default => '%d/%m/%Y')
-ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:default => '%d/%m/%Y')
+ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(:default => '%m/%d/%Y')
+ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:default => '%m/%d/%Y')
