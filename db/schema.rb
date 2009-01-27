@@ -9,10 +9,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081227030817) do
+ActiveRecord::Schema.define(:version => 20090127172355) do
 
   create_table "leads", :force => true do |t|
-    t.string   "updated_by"
     t.string   "company_name"
     t.string   "contact"
     t.string   "address"
@@ -30,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20081227030817) do
     t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "updated_by"
   end
 
 end
