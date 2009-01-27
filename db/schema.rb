@@ -12,6 +12,7 @@
 ActiveRecord::Schema.define(:version => 20081227030817) do
 
   create_table "leads", :force => true do |t|
+    t.string   "updated_by"
     t.string   "company_name"
     t.string   "contact"
     t.string   "address"

@@ -1,6 +1,7 @@
 class CreateLeads < ActiveRecord::Migration
   def self.up
     create_table :leads do |t|
+      t.string :updated_by
       t.string :company_name
       t.string :contact
       t.string :address
