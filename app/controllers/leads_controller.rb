@@ -1,7 +1,9 @@
 class LeadsController < ApplicationController
   before_filter CASClient::Frameworks::Rails::Filter
   layout "leads"
+
   active_scaffold :lead do |config|
+    config.search_columns << :updated_at
     # change the heading for list view
     config.label = "Customer Leads"
     # this decides what data to show in the list view
