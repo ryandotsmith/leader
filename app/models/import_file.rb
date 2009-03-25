@@ -8,10 +8,15 @@ class ImportFile < ActiveRecord::Base
   def to_indexed_hash
     i = 0
     data = Hash.new
-    FasterCSV.foreach("#{ self.lead_data.path }",:headers => true) do |row|
-      i += 1
-      data[i] = row.to_hash
-    end #end do
+    begin
+      FasterCSV.foreach("#{ self.lead_data.path }",:headers => true) do |row|
+        i += 1
+        data[i] = row.to_hash
+      end #end do
+    rescue
+      # return a hash that will fail as a lead
+      return {1=>{:company_name => nil}}
+    end
     data
   end#make_csv
   
