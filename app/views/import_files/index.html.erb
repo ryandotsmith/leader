@@ -1,0 +1,20 @@
+<h1>Listing import_files</h1>
+
+<table>
+  <tr>
+    <th>Comment</th>
+  </tr>
+
+<% for import_file in @import_files %>
+  <tr>
+    <td><%=h import_file.comment %></td>
+    <td><%= link_to 'Show', import_file %></td>
+    <td><%= link_to 'Edit', edit_import_file_path(import_file) %></td>
+    <td><%= link_to 'Destroy', import_file, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New import_file', new_import_file_path %>

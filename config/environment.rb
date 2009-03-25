@@ -79,6 +79,7 @@ ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(:default =
 
 require 'casclient'
 require 'casclient/frameworks/rails/filter'
+require 'fastercsv'
 
 CASClient::Frameworks::Rails::Filter.configure(
   :cas_base_url => "https://10.0.1.20/"

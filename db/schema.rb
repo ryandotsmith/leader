@@ -9,7 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090127172355) do
+ActiveRecord::Schema.define(:version => 20090325164613) do
+
+  create_table "import_files", :force => true do |t|
+    t.string   "comment"
+    t.boolean  "consumed"
+    t.string   "lead_data_file_name"
+    t.string   "lead_data_content_type"
+    t.integer  "lead_data_file_size"
+    t.datetime "lead_data_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "leads", :force => true do |t|
     t.string   "company_name"
@@ -30,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20090127172355) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "updated_by"
+    t.integer  "import_file_id"
   end
 
 end

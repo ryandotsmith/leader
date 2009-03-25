@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :import_files
+
   map.resources :leads,:active_scaffold => true
 
   # The priority is based upon order of creation: first created -> highest priority.
