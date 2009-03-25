@@ -34,6 +34,7 @@ role :db, domain, :primary => true
 #	Git
 #############################################################
 set :scm, :git
+set :scm_verbose, true
 set :repository, "git@github.com:ryandotsmith/leader.git"
 set :branch, "master"
 set :deploy_via, :remote_cache
