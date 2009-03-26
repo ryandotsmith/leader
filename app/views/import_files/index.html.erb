@@ -1,20 +1,26 @@
-<h1>Listing import_files</h1>
+<div id="left">
+			<h2><%= link_to 'Back to Leads', leads_url  %>  </h2> 
+</div><!--end left-->
+<div id="center">
+	<h1>Listing Import Files</h1>
+	<h2><%= link_to 'New import_file', new_import_file_path %></h2>
 
-<table>
-  <tr>
-    <th>Comment</th>
-  </tr>
-
-<% for import_file in @import_files %>
-  <tr>
-    <td><%=h import_file.comment %></td>
-    <td><%= link_to 'Show', import_file %></td>
-    <td><%= link_to 'Edit', edit_import_file_path(import_file) %></td>
-    <td><%= link_to 'Destroy', import_file, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New import_file', new_import_file_path %>
+	<table id="import_files_table" class='tablesorter'>
+	<thead>
+	  <tr>
+			<th>Date Uploaded</th>
+			<th>Import Status</th>
+	    <th>Comment</th>
+	  </tr>
+	</thead>
+	<tbody>
+	<% for import_file in @import_files %>
+	  <tr>
+			<td><%= link_to import_file.created_at.to_s, import_file %></td>
+			<td><%= import_file.consumed%></td>
+	    <td><%= import_file.comment %></td>
+	  </tr>
+	<% end %>
+	</tbody>
+	</table>	
+</div><!--end center-->

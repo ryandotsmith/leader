@@ -1,15 +1,28 @@
-<p>
-	<%= @import_file.update_hook_param %>
-</p>
-<p>
-	<b>File:</b>
-	<%= link_to @import_file.comment.to_s, @import_file.lead_data.url %>
-</p>
-
-<p>
-  <b>Comment:</b>
-  <%=h @import_file.comment %>
-</p>
-
-<%= link_to 'Edit', edit_import_file_path(@import_file) %> |
-<%= link_to 'Back', import_files_path %>
+<div id="left">
+	
+</div><!--end left-->
+<div id="center">
+	<p>
+		<h2>{ To download this file, right click on the <strong>File</strong> and select 'save as ' }</h2>
+	</p>
+	<p>
+		<b>File:</b>
+		<%= link_to @import_file.comment.to_s, @import_file.lead_data.url %>
+	</p>	
+	<p>
+	  <b>Date Uploaded:</b>
+	  <%=h @import_file.created_at %>
+	</p>
+	<p>
+	<b>Import Status:</b>
+	<% if @import_file.consumed %>
+ 	This file has been imported into the leads table!
+	<% else %>
+	Waiting to be consumed. . . 
+	<% end %>
+	</p>
+	<%= link_to 'Destroy', @import_file, :confirm => 'Are you sure?', :method => :delete %> |
+	<%= link_to 'Edit', edit_import_file_path(@import_file) %> |
+	<%= link_to 'Back', import_files_path %>
+	
+</div><!--end center-->

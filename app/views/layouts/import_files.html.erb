@@ -6,14 +6,35 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Files: <%= controller.action_name %></title>
 	<%= javascript_include_tag :defaults %>
-  	<%= stylesheet_link_tag 'scaffold' %>
+	<%= javascript_include_tag 'jquery-1.3.2.min.js'%>
+	<%= javascript_include_tag 'jquery-ui-1.7.1.custom.min.js'%>
+	<%= javascript_include_tag 'jquery.tablesorter.min.js'%>
+ 	<%= stylesheet_link_tag 'std.css' %>
+ 	<%= stylesheet_link_tag 'style.css' %>
+	<%= stylesheet_link_tag 'css/humanity/jquery-ui-1.7.1.custom.css'%>
 </head>
+<script>
+	jQuery.noConflict();
+	jQuery(document).ready(function(){
+	       jQuery("#import_files_table").tablesorter({ 
+						widthFixed: true, widgets: ['zebra']
+					});
+	});
+</script>
+
 <body>
+<div id="header">
+	<%= link_to "#{image_tag("header.png")}", "http://www2.gs-enterprises.local/?page_id=13"%>
+</div>
 
-<p style="color: green"><%= flash[:notice] %>  </p>
-<p style="color: red">  <%= flash[:warning] %> </p>
-
-<%= yield  %>
+<div id="container">
+	<div id="info_bar">
+		<%= render :partial => "/global/navigation" %>
+		<p class="info">      <%= flash[:notice] %></p>
+		<p class="warning">   <%= flash[:warning]%></p>
+	</div>
+	<%= yield  %>	
+</div><!--end container-->
 
 </body>
 </html>
